@@ -8,4 +8,12 @@ class proyectos:
         
     def validar_fechas():
         return
-        
+    
+    def crear():
+        return
+    
+    def editar():
+        return
+    
+    def eliminar():
+        return   

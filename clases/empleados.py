@@ -1,5 +1,10 @@
-class empleados:
-    def __init__(self, id_empleados, nombre_empleados, direccion_empleados, telefono_empleados, correo_empleados, f_inicio_contrato, salario_empleados, rut, contraseña, id_tipo, id_rol):
+import tipo_empleados
+import rol
+
+class empleados(tipo_empleados, rol):
+    def __init__(self, id_empleados, nombre_empleados, direccion_empleados, telefono_empleados, correo_empleados, f_inicio_contrato, salario_empleados, rut, contraseña, fecha_nacimiento, id_tipo, id_rol):
+        tipo_empleados.__init__(id_tipo)
+        rol.__init__(id_rol)
         self.id_empleados = id_empleados
         self.nombre_empleados = nombre_empleados
         self.direccion_empleados = direccion_empleados
@@ -9,6 +14,7 @@ class empleados:
         self.salario_empleados = salario_empleados
         self.rut = rut
         self.contraseña = contraseña
+        self.fecha_nacimiento = fecha_nacimiento
 
     def validar_datos():
         return
@@ -18,3 +24,16 @@ class empleados:
     
     def descriptar():
         return
+    
+    def registrar():
+        return
+    
+    def asignar_departamento():
+        return
+    
+    def asignar_proyecto():
+        return
+    
+    def registrar_tiempo():
+        return
+    

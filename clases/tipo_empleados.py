@@ -4,7 +4,11 @@ class tipo_empleados:
         self.nombre_tipo = nombre_tipo
         self.detalle = detalle
         
-
+    def crear():
+        return
+    
+    def editar():
+        return
     
 
     
