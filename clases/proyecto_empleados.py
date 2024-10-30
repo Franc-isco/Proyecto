@@ -1,12 +1,13 @@
 import proyectos
 import empleados
 
-class proyecto_empleados(proyectos, empleados):
-    def __init__(self, id_asociacion, id_proyectos, id_empleados):
-        proyectos.__init__(id_proyectos)
-        empleados.__init__(id_empleados)
+class ProyectoEmpleados(proyectos.Proyecto, empleados.Empleado):
+    def __init__(self, id_asociacion, id_proyectos, id_empleado):
+        proyectos.Proyecto.__init__(self, id_proyectos)
+        empleados.Empleado.__init__(self, id_empleado)
         self.id_asociacion = id_asociacion
-    
+
+#implementar con la base de datos
     def validar_asignacion():
         return
     
