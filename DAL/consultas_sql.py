@@ -12,7 +12,7 @@ def consulta_1():
         E.rut AS 'RUT',
         E.fecha_nacimiento AS 'Fecha de Nacimiento',
         TE.id_tipo AS 'Tipo de Empleado',
-        R.id_tipo AS 'Rol'
+        R.id_rol AS 'Rol'
     FROM empleados E
     JOIN tipo_empleados TE ON E.id_tipo = TE.id_tipo
     JOIN rol R ON E.id_rol = R.id_rol;
