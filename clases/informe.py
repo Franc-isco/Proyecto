@@ -3,7 +3,7 @@ import proyectos
 import departamentos
 import registro_tiempo
 
-class informe(empleados.Empleado, proyectos.Proyecto, departamentos.Departamento, registro_tiempo.RegistroTiempo):
+class Informe(empleados.Empleado, proyectos.Proyecto, departamentos.Departamento, registro_tiempo.RegistroTiempo):
     def __init__(self, id_informe, nombre_informe, fecha_creacion, ubicacion, id_empleado, id_proyectos, id_departamento, id_registro):
         empleados.Empleado.__init__(self, id_empleado)
         proyectos.Proyecto.__init__(self, id_proyectos)
