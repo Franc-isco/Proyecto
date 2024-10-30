@@ -11,7 +11,7 @@ def consulta_1():
         E.salario_empleados AS 'Salario',
         E.rut AS 'RUT',
         E.fecha_nacimiento AS 'Fecha de Nacimiento',
-        TE.tipo AS 'Tipo de Empleado',
+        TE.tipo_empleados AS 'Tipo de Empleado',
         R.rol AS 'Rol'
     FROM empleados E
     JOIN tipo_empleados TE ON E.id_tipo = TE.id_tipo
