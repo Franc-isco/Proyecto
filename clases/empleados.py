@@ -36,16 +36,4 @@ class Empleado(tipo_empleados.TipoEmpleados, rol.Rol):
     def verificar_contraseña(self, contraseña): #verifica la contraseña ingresada
         return bcrypt.checkpw(contraseña.encode('utf-8'), self.contraseña)
     
-    #implementar con la base de datos
-    def registrar():
-        return
-    
-    def asignar_departamento():
-        return
-    
-    def asignar_proyecto():
-        return
-    
-    def registrar_tiempo():
-        return
     

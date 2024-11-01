@@ -3,11 +3,3 @@ class Modulo:
         self.cod_modulos = cod_modulos
         self.nombre_modulos = nombre_modulos
     
-    def crear():
-        return
-    
-    def editar():
-        return
-    
-    def eliminar():
-        return 
