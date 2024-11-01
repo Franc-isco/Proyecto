@@ -18,3 +18,14 @@ def consulta_1():
     JOIN rol R ON E.id_rol = R.id_rol;
     """)
     return consulta1 
+
+def consulta_2():
+    #Obtener información de departamentos. 
+    consulta2 = ("""
+    SELECT 
+        D.id_departamento AS 'ID',
+        D.nombre_departamentos AS 'Nombre',
+        D.telefono_departamentos AS 'Teléfono'
+    FROM departamentos D;
+    """)
+    return consulta2
