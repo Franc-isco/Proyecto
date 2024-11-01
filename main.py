@@ -1,5 +1,6 @@
 from DAL.db import generar_conexion
 from DAL.consultas_sql import consulta_1, consulta_2
+from clases.empleados import Empleado 
 
 print("""
       Seleccione su Opción:
