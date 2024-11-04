@@ -1,4 +1,4 @@
-from db import generar_conexion
+from .db import generar_conexion
 from clases.tipo_empleados import TipoEmpleados
 from clases.rol import Rol
 from clases.empleados import Empleado

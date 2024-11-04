@@ -1,13 +1,13 @@
-import tipo_empleados
-import rol
+from .tipo_empleados import TipoEmpleados
+from .rol import Rol
 from rut_chile import rut_chile
 import re
 import bcrypt
 
-class Empleado(tipo_empleados.TipoEmpleados, rol.Rol):
+class Empleado(TipoEmpleados, Rol):
     def __init__(self, id_empleado, nombre_empleados, direccion_empleados, telefono_empleados, correo_empleados, f_inicio_contrato, salario_empleados, rut, contraseña, fecha_nacimiento, id_tipo, id_rol):
-        tipo_empleados.TipoEmpleados.__init__(self, id_tipo)
-        rol.Rol.__init__(self, id_rol)
+        TipoEmpleados.__init__(self, id_tipo)
+        Rol.__init__(self, id_rol)
         self.id_empleado = id_empleado
         self.nombre_empleados = nombre_empleados
         self.direccion_empleados = direccion_empleados
