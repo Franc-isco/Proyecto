@@ -2,7 +2,7 @@ from .tipo_empleados import TipoEmpleados
 from .rol import Rol
 from rut_chile import rut_chile
 import re
-import bcrypt
+
 
 class Empleado(TipoEmpleados, Rol):
     def __init__(self, id_empleado, nombre_empleados, direccion_empleados, telefono_empleados, correo_empleados, f_inicio_contrato, salario_empleados, rut, contraseña, fecha_nacimiento, id_tipo, id_rol):
@@ -29,11 +29,5 @@ class Empleado(TipoEmpleados, Rol):
         else:
             return False
     
-    def encriptar(self, contraseña): #utiliza bcrypt. 
-        return bcrypt.hashpw(contraseña.encode('utf-8'), bcrypt.gensalt())
-    
-    
-    def verificar_contraseña(self, contraseña): #verifica la contraseña ingresada
-        return bcrypt.checkpw(contraseña.encode('utf-8'), self.contraseña)
     
     
