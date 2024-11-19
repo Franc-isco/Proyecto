@@ -40,4 +40,3 @@ def generar_conexion(user, password, server, database, consulta):
             conexion.close()
             print('Conexión cerrada')
             
-            
