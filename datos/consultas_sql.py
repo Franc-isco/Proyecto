@@ -22,12 +22,12 @@ def consulta_empleados():
     return consulta1
 
 def consulta_2():
-    #Obtener información de departamentos. 
-    consulta2 = ("""
+    # Obtener información de departamentos. 
+    consulta2 = """
     SELECT 
         D.id_departamento AS 'ID',
-        D.nombre_departamentos AS 'Nombre',
-        D.telefono_departamentos AS 'Teléfono'
+        D.nombre_departamento AS 'Nombre',
+        D.telefono_departamento AS 'Teléfono'
     FROM departamentos D;
-    """)
+    """
     return consulta2
