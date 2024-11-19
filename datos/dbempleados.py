@@ -1,7 +1,7 @@
 from .db import generar_conexion
-from clases.tipo_empleados import TipoEmpleados
-from clases.rol import Rol
-from clases.empleados import Empleado
+from modelos.tipo_empleados import TipoEmpleados
+from modelos.rol import Rol
+from modelos.empleados import Empleado
 
 def crear_empleado(user, password, server, database, empleado: Empleado):
     id_empleado = 0

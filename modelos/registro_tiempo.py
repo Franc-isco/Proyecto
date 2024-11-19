@@ -1,14 +1,15 @@
-import proyecto_empleados
+from modelos.proyecto_empleados import ProyectoEmpleados
 from datetime import datetime
 
-class RegistroTiempo(proyecto_empleados.ProyectoEmpleados):
-    def __init__(self, id_registro, fecha, descripcion_tareas, observacion, id_asociacion, cantidad_horas):
-        proyecto_empleados.ProyectoEmpleados.__init__(self, id_asociacion)
-        self.id_registro = id_registro
-        self.fecha = fecha
-        self.descripcion_tareas = descripcion_tareas
-        self.observacion = observacion
-        self.cantidad_horas = cantidad_horas
+class RegistroTiempo(ProyectoEmpleados):
+    def __init__(self, id_registro_tiempo = 0, fecha_registro = '', tiempo_trabajado = 0, tareas_realizadas = '', observaciones = '', id_empleado_proyecto= 0, habilitado = True):
+        super().__init__(id_empleado_proyecto)
+        self.id_registro_tiempo = id_registro_tiempo
+        self.fecha_registro = fecha_registro
+        self.tiempo_trabajado = tiempo_trabajado
+        self.tareas_realizadas = tareas_realizadas
+        self.observaciones = observaciones
+        self.habilitado = habilitado
         
     def validar_cantidad_horas(self): #que sea un número y esté en el rango
         try:

@@ -1,13 +1,20 @@
+from modelos.cliente import Cliente
+from modelos.departamentos import Departamento
 from datetime import datetime
 
-class Proyecto: 
-    def __init__(self, id_proyectos, nombre_proyectos, descripcion_proyectos, fecha_inicio, fecha_fin):
-        self.id_proyectos = id_proyectos
-        self.nombre_proyectos = nombre_proyectos
-        self.descripcion_proyectos = descripcion_proyectos
+
+class Proyecto (Cliente, Departamento): 
+    def __init__(self, id_proyecto = 0, nombre_proyecto = '', descripcion_proyecto = '', fecha_inicio = '', fecha_fin = '', habilidato = True, id_departamento = 0, id_cliente = 0):
+        super().__init__(id_cliente)
+        super().__init__(id_departamento)
+        self.id_proyecto = id_proyecto
+        self.nombre_proyecto = nombre_proyecto
+        self.descripcion_proyecto = descripcion_proyecto
         self.fecha_inicio = fecha_inicio
         self.fecha_fin = fecha_fin
-        
+        self.habilitado = habilidato
+
+
     def validar_fechas(self): #fecha inicio no sea posterior a fecha fin
         try:
             fecha_inicio_dt = datetime.strptime(self.fecha_inicio, '%Y-%m-%d')

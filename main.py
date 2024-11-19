@@ -1,7 +1,7 @@
-from DAL.db import generar_conexion
-from DAL.consultas_sql import consulta_1, consulta_2
-from clases.empleados import Empleado 
-from DAL.dbempleados import crear_empleado
+from datos.db import generar_conexion
+from datos.consultas_sql import consulta_1, consulta_2
+from modelos.empleados import Empleado 
+from datos.dbempleados import crear_empleado
 
 print("""
       Seleccione su Opción:
