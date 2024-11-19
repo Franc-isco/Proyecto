@@ -1,4 +1,4 @@
-from modelos.cliente import Cliente
+from modelos.clientes import Cliente
 from modelos.departamentos import Departamento
 from datetime import datetime
 

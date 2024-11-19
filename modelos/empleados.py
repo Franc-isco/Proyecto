@@ -1,11 +1,11 @@
 from modelos.tipo_empleados import TipoEmpleados
-from modelos.rol import Rol 
+from modelos.roles import Rol 
 from rut_chile import rut_chile
 import re
 
 
 class Empleado(TipoEmpleados, Rol):
-    def __init__(self, id_empleado = 0, nombre_empleado = '', direccion_empleado = '', telefono_empleado = '', correo_empleado = '', f_inicio_contrato = '', salario_empleado = 0, rut = '', contrasena_empleado = '', fecha_nacimiento = '', id_tipo_empleado = 0, id_rol = 0, habilitado = True):
+    def __init__(self, id_empleado = 0, nombre_empleado = '', direccion_empleado = '', telefono_empleado = '', correo_empleado = '', fecha_inicio_contrato = '', salario_empleado = 0, rut = '', contrasena_empleado = '', fecha_nacimiento = '', id_tipo_empleado = 0, id_rol = 0, habilitado = True):
         super().__init__(id_tipo_empleado)
         super().__init__(id_rol)
         self.id_empleado = id_empleado
@@ -13,7 +13,7 @@ class Empleado(TipoEmpleados, Rol):
         self.direccion_empleado = direccion_empleado
         self.telefono_empleado = telefono_empleado
         self.correo_empleado = correo_empleado
-        self.f_inicio_contrato = f_inicio_contrato
+        self.fecha_inicio_contrato = fecha_inicio_contrato
         self.salario_empleado = salario_empleado
         self.rut = rut
         self.contrasena_empleado = contrasena_empleado

@@ -1,5 +1,5 @@
 from modelos.empleados import Empleado
-from modelos.rol import Rol
+from modelos.roles import Rol
 from modelos.modulos import Modulo
 
 class Usuario(Empleado, Rol, Modulo):
