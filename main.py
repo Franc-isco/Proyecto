@@ -1,5 +1,5 @@
 from datos.db import generar_conexion
-from datos.consultas_sql import consulta_1, consulta_2
+from datos.consultas_sql import consulta_empleados, consulta_2
 from modelos.empleados import Empleado 
 from datos.dbempleados import crear_empleado
 
@@ -13,7 +13,7 @@ accion = input('Ingresa su opción: ')
 
 
 if accion == '1':
-    generar_conexion('root', '', 'localhost', 'proyecto', consulta_1())
+    generar_conexion('root', '', 'localhost', 'proyecto', consulta_empleados())
 elif accion == '2':
     generar_conexion('root', '', 'localhost', 'proyecto', consulta_2())
 elif accion == '3':

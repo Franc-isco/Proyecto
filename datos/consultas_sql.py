@@ -1,23 +1,25 @@
-def consulta_1():
-    #Obtner informacion de empleados
+def consulta_empleados():
+    # Obtener información de empleados
     consulta1 = ("""
     SELECT 
         E.id_empleado AS 'ID',
-        E.nombre_empleados AS 'Nombre',
-        E.direccion_empleados AS 'Dirección',
-        E.telefono_empleados AS 'Teléfono',
-        E.correo_empleados AS 'Correo',
-        E.f_inicio_contrato AS 'Fecha de Inicio de Contrato',
-        E.salario_empleados AS 'Salario',
+        E.nombre_empleado AS 'Nombre',
+        E.direccion_empleado AS 'Dirección',
+        E.telefono_empleado AS 'Teléfono',
+        E.correo_empleado AS 'Correo',
+        E.fecha_inicio_contrato AS 'Fecha de Inicio de Contrato',
+        E.salario_empleado AS 'Salario',
         E.rut AS 'RUT',
         E.fecha_nacimiento AS 'Fecha de Nacimiento',
-        TE.id_tipo AS 'Tipo de Empleado',
-        R.id_rol AS 'Rol'
+        TE.id_tipo_empleado AS 'ID Tipo de Empleado',
+        TE.nombre_tipo AS 'Tipo de Empleado',
+        R.id_rol AS 'ID Rol',
+        R.nombre_rol AS 'Rol'
     FROM empleados E
-    JOIN tipo_empleados TE ON E.id_tipo = TE.id_tipo
-    JOIN rol R ON E.id_rol = R.id_rol;
+    JOIN tipos_empleados TE ON E.id_tipo_empleado = TE.id_tipo_empleado
+    JOIN roles R ON E.id_rol = R.id_rol;
     """)
-    return consulta1 
+    return consulta1
 
 def consulta_2():
     #Obtener información de departamentos. 
